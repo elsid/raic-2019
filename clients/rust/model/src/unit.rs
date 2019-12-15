@@ -1,5 +1,5 @@
 use crate::*;
-#[derive(Clone, Debug, trans::Trans)]
+#[derive(Clone, Debug, trans::Trans, RustcEncodable)]
 pub struct Unit {
     pub player_id: i32,
     pub id: i32,

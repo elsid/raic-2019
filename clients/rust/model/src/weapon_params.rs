@@ -1,5 +1,5 @@
 use crate::*;
-#[derive(Clone, Debug, trans::Trans)]
+#[derive(Clone, Debug, trans::Trans, RustcEncodable)]
 pub struct WeaponParams {
     pub magazine_size: i32,
     pub fire_rate: f64,

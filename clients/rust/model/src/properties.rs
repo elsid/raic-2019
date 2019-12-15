@@ -1,5 +1,5 @@
 use crate::*;
-#[derive(Clone, Debug, trans::Trans)]
+#[derive(Clone, Debug, trans::Trans, RustcEncodable)]
 pub struct Properties {
     pub max_tick_count: i32,
     pub team_size: i32,

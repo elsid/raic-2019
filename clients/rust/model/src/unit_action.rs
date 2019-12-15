@@ -1,5 +1,5 @@
 use crate::*;
-#[derive(Clone, Debug, trans::Trans)]
+#[derive(Clone, Debug, trans::Trans, RustcEncodable)]
 pub struct UnitAction {
     pub velocity: f64,
     pub jump: bool,

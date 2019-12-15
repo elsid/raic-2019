@@ -1,5 +1,5 @@
 use crate::*;
-#[derive(Clone, Debug, trans::Trans)]
+#[derive(Clone, Debug, trans::Trans, RustcEncodable)]
 pub struct Game {
     pub current_tick: i32,
     pub properties: Properties,

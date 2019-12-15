@@ -1,3 +1,4 @@
+extern crate rustc_serialize;
 
 mod vec2_f32;
 pub use self::vec2_f32::*;

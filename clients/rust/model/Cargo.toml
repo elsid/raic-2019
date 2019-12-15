@@ -5,3 +5,4 @@ edition = "2018"
 
 [dependencies]
 trans = { path = "trans" }
+rustc-serialize = "0.3"
