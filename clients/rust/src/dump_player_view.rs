@@ -35,12 +35,19 @@ fn main() -> std::io::Result<()> {
     args.token.write_to(&mut writer)?;
     writer.flush()?;
 
+    let mut first = true;
+
     loop {
         let message = model::ServerMessageGame::read_from(&mut reader)?;
-        let player_view = match message.player_view {
+        let mut player_view = match message.player_view {
             Some(view) => view,
             None => break,
         };
+        if first {
+            first = false;
+        } else {
+            player_view.game.level.tiles.clear();
+        }
         let json = rustc_serialize::json::encode(&player_view).expect("Can't serialize player_view");
         write!(&mut std::io::stdout(), "{}\n", json)?;
         let message = model::PlayerMessageGame::ActionMessage {
