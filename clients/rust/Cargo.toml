@@ -6,3 +6,9 @@ edition = "2018"
 [dependencies]
 model = { path = "model", package = "aicup2019-model" }
 trans = { path = "model/trans" }
+rustc-serialize = "0.3"
+
+[[bin]]
+name = "dump_player_view"
+edition = "2018"
+path = "src/dump_player_view.rs"
